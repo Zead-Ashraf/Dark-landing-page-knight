@@ -1,0 +1,137 @@
+html, body {
+	width:  100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-family: sans-serif;
+	box-sizing: border-box;
+	overflow-x: hidden;
+}
+
+body {
+	background-color: #000000;
+}
+
+/******************************************** navbar start **************************************************/
+
+.navbar {
+	position: absolute;
+	width: 95%;
+	height: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+	margin: 2%;
+}
+
+.navbar-header {
+	color: #1de9b6;
+	font-size: 2rem;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.navbar-container {
+	width: 36%;
+	display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 1%;
+}
+
+.navbar-item a {
+	color: rgba(255, 255, 255, 0.7);
+	text-decoration: none;
+}
+
+/*.navbar-container:nth-last-child() .navbar-item a {
+	color: #1de9b6;
+}*/
+
+/***************************************  navbar end *****************************************************/
+
+/***************************************** intro strat***************************************************/
+
+.intro {
+	width: 100vw;
+	height: 100vw;
+}
+
+.intro-content {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-content .header {
+	height: 16%;
+}
+
+/***************************************** intro end*****************************************************/
+
+
+
+
+
+
+
+/******************************************* OOCSS *****************************************************/
+
+.header {
+	width: 25ch;
+    color: white;
+    line-height: 5rem;
+    font-weight: bolder;
+    margin: .5rem 0;
+}
+
+.paragraph {
+	width: 60ch;
+    line-height: 1.6rem;
+    margin: 2%;
+}
+
+.button {
+	color: #11171a;
+	font-size: 1.2rem;
+	background-color: #1de9b6;
+	border-radius: 4px;
+	border: none;
+	box-shadow: -1px 2px 13px 0px #1de9b6;
+    padding: 12px 30px;
+    cursor: pointer;
+}
+
+.bold {
+	font-weight: normal;
+	color: #cfd8dc;
+}
+
+.light {
+	font-weight: normal;
+	color: #78909C;
+}
+
+.fs-h1 {
+	font-size: 3rem;
+}
+
+.fs-1_5 {
+	font-size: 1.3rem;
+}
+
+.fs-2 {
+	font-size: 2rem;
+}
+
+.align-center {
+	text-align: center;
+}
