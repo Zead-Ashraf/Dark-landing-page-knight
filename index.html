@@ -4,121 +4,129 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800;900&display=swap" rel="stylesheet"> 
 	<title>Dark Landing page | solid</title>
 </head>
 <body>
 <nav class="navbar" id="navbar">
 	<a class="navbar-header" href="#">Knight</a>
-	<ul class="navbar-container">
+	<button class="navbar-collapse" id="navbar-collapse">تخيل</button>
+	<ul class="navbar-container" id="navbar-container">
 		<li class="navbar-item"><a href="#">Features</a></li>
 		<li class="navbar-item"><a href="#">Pricing</a></li>
 		<li class="navbar-item"><a href="#">FAQ</a></li>
 		<li class="navbar-item"><a href="#">Blog</a></li>
-		<li class="navbar-item"><a href="#"><span></span> Try Generator </a></li>
+		<li class="navbar-item navbar-item-special"><a href="#"><span></span> Try Generator </a></li>
 	</ul>
 </nav>
+
+<button class="btt" id="btt"><img src="img/angle_up_icon.svg" alt="angle_Up"></button>
 
 <section class="intro">
 	<content class="intro-content">
 		<h1 class="header fs-h1 align-center">Quickly build landing pages with Knight</h1>
-		<p class="paragraph fs-1_5 bold align-center">Knight is a platform that helps freelancers and companies build beautiful landing pages in minutes. Sign up for free.</p>
+		<p class="paragraph bold fs-1_5 align-center">Knight is a platform that helps freelancers and companies build beautiful landing pages in minutes. Sign up for free.</p>
 		<button class="button">Get Started Now</button>
 	</content>
 </section>
 
 <section class="features" id="features">
-	<content class="features-header">
-		<h2 class="header fs-x">Knight offers everything you need.</h2>
-		<p class="paragraph fs-x">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nisi commodo, tempus odio a, vestibulum nibh.</p>
+	<content class="features-header align-center">
+		<h2 class="header fs-2_5">Knight offers everything you need.</h2>
+		<p class="paragraph light fs-1_5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nisi commodo, tempus odio a, vestibulum nibh.</p>
 	</content>
 
-	<content class="features-cards">
+	<content class="features-cards align-center">
 		<div class="card">
-			<span class="greed-icon"><img src=""></span>
-			<h6>Create once. Share everywhere.</h6>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nisi commodo, tempus odio a, vestibulum nibh.</p>
+			<span class="green-icon-container"><svg class="green-blue-icon" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-3"><polygon points="14 2 18 6 7 17 3 17 3 13 14 2"></polygon><line x1="3" y1="22" x2="21" y2="22"></line></svg></span>
+			<h6 class="header fs-1_5">Create once. Share everywhere.</h6>
+			<p class="paragraph light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nisi commodo, tempus odio a, vestibulum nibh.</p>
 		</div>
 		<div class="card">
-			<span class="greed-icon"><img src=""></span>
-			<h6>Unlimited devices</h6>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nisi commodo, tempus odio a, vestibulum nibh.</p>
+			<span class="green-icon-container"><svg class="green-icon" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-monitor"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></span>
+			<h6 class="header fs-1_5">Unlimited devices</h6>
+			<p class="paragraph light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nisi commodo, tempus odio a, vestibulum nibh.</p>
 		</div>
 		<div class="card">
-			<span class="red-icon"><img src=""></span>
-			<h6>Beautiful tempates & layouts</h6>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nisi commodo, tempus odio a, vestibulum nibh.</p>
+			<span class="red-icon-container"><svg class="red-icon" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layout"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg></span>
+			<h6 class="header fs-1_5">Beautiful tempates & layouts</h6>
+			<p class="paragraph light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nisi commodo, tempus odio a, vestibulum nibh.</p>
 		</div>
 		<div class="card">
-			<span class="blue-icon"><img src=""></span>
-			<h6>Available globally</h6>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nisi commodo, tempus odio a, vestibulum nibh.</p>
+			<span class="blue-icon-container"><svg class="blue-icon" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></span>
+			<h6 class="header fs-1_5">Available globally</h6>
+			<p class="paragraph light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nisi commodo, tempus odio a, vestibulum nibh.</p>
 		</div>
 	</content>
 </section>
 
 <section class="slider-container">
 	<content class="slider-header">
-		<h4 class="header">Knight is more than just a page builder.</h4>
-		<p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis pulvinar vestibulum. Donec eleifend, sem sed dictum mattis, turpis purus placerat eros.</p>
+		<h4 class="header fs-2_5">Knight is more than just a page builder.</h4>
+		<p class="paragraph bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis pulvinar vestibulum. Donec eleifend, sem sed dictum mattis, turpis purus placerat eros.</p>
 		<button class="button bg-white">TRY THE LIVE DEMO</button>
 	</content>
 
 	<aside class="slider-body">
-		<button class="slider-button"></button>
-		<button class="slider-button"></button>
-		<button class="slider-button"></button>
-		<div>
-			<img src="img/blog-1.jpg" id="slide-1">
-			<img src="img/blog-2.jpg" id="slide-2">
-			<img src="img/blog-3.jpg" id="slide-3">
+		<div class="slider-buttons">
+			<button class="slider-button" id="slider-button1"></button>
+			<button class="slider-button" id="slider-button0"></button>
+			<button class="slider-button" id="slider-button-1"></button>
+		</div>
+		<div class="slider-items" id="slider-items">
+			<img class="slider-item" src="img/blog-1.jpg" id="slide-1">
+			<img class="slider-item" src="img/blog-2.jpg" id="slide-2">
+			<img class="slider-item" src="img/blog-3.jpg" id="slide-3">
 		</div>
 	</aside>
 </section>
 
 <section class="pricing" id="pricing">
-	<content class="pricing-header">
-		<h2>Choose your pricing plan.</h2>
-		<p>Simply pricing - 7 Days free trial</p>
+	<content class="pricing-header align-center">
+		<h2 class="header fs-2_5">Choose your pricing plan.</h2>
+		<p class="paragraph bold fs-1_5">Simply pricing - 7 Days free trial</p>
 	</content>
 
 	<content class="pricing-cards">
-		<div class="card card-1">
-			<h5 class="card-header">Personal</h5>
+		<div class="card">
+			<h5 class="card-header header align-center fs-1_5">Personal</h5>
 			<h5 class="card-pricing">$59</h5>
 			<span class="per-x">per month</span>
 			<ul class="card-features">
-				<li class="card-feature"><p class="card-feature-paragraph paragraph">1 user</p></li>
-				<li class="card-feature"><p class="card-feature-paragraph paragraph">10 websites</p></li>
-				<li class="card-feature"><p class="card-feature-paragraph paragraph">Access to premium templates</p></li>
-				<li class="card-feature"><p class="card-feature-paragraph paragraph">Basic support</p></li>
+				<li class="card-feature"><p class="card-feature-paragraph bold fw-bold paragraph">1 user</p></li>
+				<li class="card-feature"><p class="card-feature-paragraph bold fw-bold paragraph">10 websites</p></li>
+				<li class="card-feature"><p class="card-feature-paragraph bold fw-bold paragraph">Access to premium templates</p></li>
+				<li class="card-feature"><p class="card-feature-paragraph bold fw-bold paragraph">Basic support</p></li>
 			</ul>
 
 			<button class="button">START FREE TRIAL</button>
 		</div>
 
-		<div class="card card-1">
-			<h5 class="card-header">Agency</h5>
+		<div class="card">
+			<h5 class="card-header header align-center fs-1_5">Agency</h5>
 			<h5 class="card-pricing card-pricing-blue">$159</h5>
 			<span class="per-x">per month</span>
 			<ul class="card-features">
-				<li class="card-feature"><p class="card-feature-paragraph paragraph">2-15 users</p></li>
-				<li class="card-feature"><p class="card-feature-paragraph paragraph">50 websites</p></li>
-				<li class="card-feature"><p class="card-feature-paragraph paragraph">Access to premium templates</p></li>
-				<li class="card-feature"><p class="card-feature-paragraph paragraph">Priority support</p></li>
+				<li class="card-feature"><p class="card-feature-paragraph bold fw-bold paragraph">2-15 users</p></li>
+				<li class="card-feature"><p class="card-feature-paragraph bold fw-bold paragraph">50 websites</p></li>
+				<li class="card-feature"><p class="card-feature-paragraph bold fw-bold paragraph">Access to premium templates</p></li>
+				<li class="card-feature"><p class="card-feature-paragraph bold fw-bold paragraph">Priority support</p></li>
 			</ul>
 
 			<button class="button button-card-blue">START FREE TRIAL</button>
 		</div>
 
-		<div class="card card-1">
-			<h5 class="card-header">Enterprise</h5>
+		<div class="card">
+			<h5 class="card-header header align-center fs-1_5">Enterprise</h5>
 			<h5 class="card-pricing">$499</h5>
 			<span class="per-x">per month</span>
 			<ul class="card-features">
-				<li class="card-feature"><p class="card-feature-paragraph paragraph">Unlimited users</p></li>
-				<li class="card-feature"><p class="card-feature-paragraph paragraph">Unlimited websites</p></li>
-				<li class="card-feature"><p class="card-feature-paragraph paragraph">Access to premium templates</p></li>
-				<li class="card-feature"><p class="card-feature-paragraph paragraph">24/7 support</p></li>
+				<li class="card-feature"><p class="card-feature-paragraph bold fw-bold paragraph">Unlimited users</p></li>
+				<li class="card-feature"><p class="card-feature-paragraph bold fw-bold paragraph">Unlimited websites</p></li>
+				<li class="card-feature"><p class="card-feature-paragraph bold fw-bold paragraph">Access to premium templates</p></li>
+				<li class="card-feature"><p class="card-feature-paragraph bold fw-bold paragraph">24/7 support</p></li>
 			</ul>
 
 			<button class="button">START FREE TRIAL</button>
@@ -127,110 +135,119 @@
 	</content>
 
 	<content class="pros">
-		<h5>Everything is covered.</h5>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nisi commodo, tempus odio a, vestibulum nibh.</p>
+		<div class="pros-header-container">
+			<h5 class="header fs-1_5">Everything is covered.</h5>
+			<p class="paragraph bold fs-1_5 pros-header-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nisi commodo, tempus odio a, vestibulum nibh.</p>
+		</div>
 		<ul class="pricing-features">
-			<li class="pricing-feature"><span></span><p class="paragraph">Weekly new templates</p></li>
-			<li class="pricing-feature"><span></span><p class="paragraph">MailChimp integration</p></li>
-			<li class="pricing-feature"><span></span><p class="paragraph">100 refund guarantee</p></li>
-			<li class="pricing-feature"><span></span><p class="paragraph">Free unlimited support</p></li>
-			<li class="pricing-feature"><span></span><p class="paragraph">Access to new features</p></li>
-			<li class="pricing-feature"><span></span><p class="paragraph">Stripe integration</p></li>
-			<li class="pricing-feature"><span></span><p class="paragraph">Advance SEO tools</p></li>
+			<li class="pricing-feature"><span></span><p class="paragraph bold">Weekly new templates</p></li>
+			<li class="pricing-feature"><span></span><p class="paragraph bold">MailChimp integration</p></li>
+			<li class="pricing-feature"><span></span><p class="paragraph bold">100 refund guarantee</p></li>
+			<li class="pricing-feature"><span></span><p class="paragraph bold">Free unlimited support</p></li>
+			<li class="pricing-feature"><span></span><p class="paragraph bold">Access to new features</p></li>
+			<li class="pricing-feature"><span></span><p class="paragraph bold">Stripe integration</p></li>
+			<li class="pricing-feature"><span></span><p class="paragraph bold">Advance SEO tools</p></li>
 		</ul>
+	</content>
+
+	<content class="create-account">
+		<h4 class="header fs-1_5">Try Knight free for 7 days</h4>
+		<p class="paragraph align-center bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nisi commodo, tempus odio a, vestibulum nibh.</p>
+		<button class="button">CREATE YOUR ACCOUNT</button>
 	</content>
 </section>
 
-<span class="br"></span>
-
-<content class="create-account">
-	<h4 class="header">Try Knight free for 7 days</h4>
-	<p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nisi commodo, tempus odio a, vestibulum nibh.</p>
-	<button class="button">CREATE YOUR ACCOUNT</button>
-</content>
-
 <section class="faq" id="faq">
 	<content class="faq-header">
-		<h3 class="header">Frequently asked questions</h3>
-		<p class="paragraph">Answers to most common questions.</p>
+		<h3 class="header align-center fs-2">Frequently asked questions</h3>
+		<p class="paragraph light align-center fs-1_5">Answers to most common questions.</p>
 	</content>
 
 	<content class="faq-cards">
 
 		<div class="faq-card">
 			<h4 class="header">Can I try it for free?</h4>
-			<p class="paragraph">Nam liber tempor cum soluta nobis eleifend option congue nihil imper per tem por legere me doming.</p>
+			<p class="paragraph light">Nam liber tempor cum soluta nobis eleifend option congue nihil imper per tem por legere me doming.</p>
 		</div>
 
 		<div class="faq-card">
 			<h4 class="header">What are the payment methods you accept?</h4>
-			<p class="paragraph">Nam liber tempor cum soluta nobis eleifend option congue nihil imper per tem por legere me doming.</p>
+			<p class="paragraph light">Nam liber tempor cum soluta nobis eleifend option congue nihil imper per tem por legere me doming.</p>
 		</div>
 
 		<div class="faq-card">
 			<h4 class="header">What is your refund policy?</h4>
-			<p class="paragraph">Nam liber tempor cum soluta nobis eleifend option congue nihil imper per tem por legere me doming.</p>
+			<p class="paragraph light">Nam liber tempor cum soluta nobis eleifend option congue nihil imper per tem por legere me doming.</p>
 		</div>
 
 		<div class="faq-card">
 			<h4 class="header">Do you have hidden fees?</h4>
-			<p class="paragraph">Nam liber tempor cum soluta nobis eleifend option congue nihil imper per tem por legere me doming.</p>
+			<p class="paragraph light">Nam liber tempor cum soluta nobis eleifend option congue nihil imper per tem por legere me doming.</p>
 		</div>
 
 		<div class="faq-card">
 			<h4 class="header">How often do you release updates?</h4>
-			<p class="paragraph">Nam liber tempor cum soluta nobis eleifend option congue nihil imper per tem por legere me doming.</p>
+			<p class="paragraph light">Nam liber tempor cum soluta nobis eleifend option congue nihil imper per tem por legere me doming.</p>
 		</div>
 
 		<div class="faq-card">
 			<h4 class="header">How can I contact you?</h4>
-			<p class="paragraph">Nam liber tempor cum soluta nobis eleifend option congue nihil imper per tem por legere me doming.</p>
+			<p class="paragraph light">Nam liber tempor cum soluta nobis eleifend option congue nihil imper per tem por legere me doming.</p>
 		</div>
 	</content>
 
 	<content class="contact-us">
-		<h5 class="header">Have questions?</h5>
+		<h5 class="header align-center fs-2">Have questions?</h5>
 		<button class="button">CONTACT US</button>
 	</content>
 </section>
 
 <section class="blog">
 	<content class="blog-header">
-		<h4 class="header">News from Knight.</h4>
-		<p class="paragraph">What's new at Knight.</p>
+		<h4 class="header align-center fs-2">News from Knight.</h4>
+		<p class="paragraph light align-center fs-1_5">What's new at Knight.</p>
 	</content>
 
 	<content class="blog-content">
 		<div class="blog-card">
-			<img src="img/blog-1.jpg">
-			<h5 class="header"><a href="#">We launch new iOS & Android mobile apps</a></h5>
-			<span class="paragraph">Sep 27, 2018</span>
-			<p class="paragraph">Nam liber tempor cum soluta nobis eleifend option congue nihil imper, consectetur adipiscing elit. <a href="#">Learn more</a></p>
+			<a href=""><img src="img/blog-1.jpg"></a>
+		
+			<div class="blog-card-body">
+				<a href="#"><h5 class="header fs-1_5">We launch new iOS & Android mobile apps</h5></a>
+				<span class="paragraph light">Sep 27, 2018</span>
+				<p class="paragraph bold">Nam liber tempor cum soluta nobis eleifend option congue nihil imper, consectetur adipiscing elit. <a href="#">Learn more</a></p>
+			</div>
 		</div>
 
 		<div class="blog-card">
-			<img src="img/blog-2.jpg">
-			<h5 class="header"><a href="#">New update is available for the editor</a></h5>
-			<span class="paragraph">August 16, 2018</span>
-			<p class="paragraph">Nam liber tempor cum soluta nobis eleifend option congue nihil imper, consectetur adipiscing elit. <a href="#">Learn more</a></p>
+			<a href=""><img src="img/blog-2.jpg"></a>
+
+			<div class="blog-card-body">
+				<a href=""><h5 class="header fs-1_5">New update is available for the editor</h5></a>
+				<span class="paragraph light">August 16, 2018</span>
+				<p class="paragraph bold">Nam liber tempor cum soluta nobis eleifend option congue nihil imper, consectetur adipiscing elit. <a href="#">Learn more</a></p>
+			</div>
 		</div>
 
 		<div class="blog-card">
-			<img src="img/blog-3.jpg">
-			<h5 class="header"><a href="#">The story of building #1 page builder</a></h5>
-			<span class="paragraph">December 2nd, 2017</span>
-			<p class="paragraph">Nam liber tempor cum soluta nobis eleifend option congue nihil imper, consectetur adipiscing elit. <a href="#">Learn more</a></p>
+			<a href=""><img src="img/blog-3.jpg"></a>
+			<div class="blog-card-body">
+				<a href=""><h5 class="header fs-1_5">The story of building #1 page builder</h5></a>
+				<span class="paragraph light">December 2nd, 2017</span>
+				<p class="paragraph bold">Nam liber tempor cum soluta nobis eleifend option congue nihil imper, consectetur adipiscing elit. <a href="#">Learn more</a></p>
+			</div>
 		</div>
 	</content>
-
-	<button class="button">VIEW ALL POSTS</button>
+	<div class="all-photos">
+		<button class="button">VIEW ALL POSTS</button>
+	</div>
 </section>
 
 <footer>
 	<content class="about-us">
-		<h4 class="header">About Knight</h4>
-		<p class="paragraph">Magnis modipsae que voloratati andigen daepeditem quiate conecus aut labore. Laceaque quiae sitiorem rest non restibusaes maio es dem tumquam explabo.</p>
-		<ul>
+		<h4 class="header fs-1_5">About Knight</h4>
+		<p class="paragraph light">Magnis modipsae que voloratati andigen daepeditem quiate conecus aut labore. Laceaque quiae sitiorem rest non restibusaes maio es dem tumquam explabo.</p>
+		<ul class="accounts-container">
 			<li class="accounts-icon"></li>
 			<li class="accounts-icon"></li>
 			<li class="accounts-icon"></li>
@@ -260,10 +277,8 @@
 
 	</content>
 
-	<small>&copy; 2022 Knight - All Rights Reserved </small>
+	<small class="paragraph light align-center">&copy; 2022 Knight - All Rights Reserved </small>
 </footer>
-
-<button class="btt"></button>
 
 <script type="text/javascript" src="js/main.js"></script>
 </body>

@@ -1,11 +1,14 @@
+* {
+	box-sizing: border-box;
+}
+
 html, body {
 	width:  100%;
 	height: 100%;
 	margin: 0;
 	padding: 0;
 	font-size: 16px;
-	font-family: sans-serif;
-	box-sizing: border-box;
+	font-family: 'Inter', sans-serif;
 	overflow-x: hidden;
 }
 
@@ -23,6 +26,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
 	margin: 2%;
+	transition: transform 1s ease;
 }
 
 .navbar-header {
@@ -32,8 +36,12 @@ body {
 	text-decoration: none;
 }
 
+.navbar-collapse {
+	display: none;
+}
+
 .navbar-container {
-	width: 36%;
+	width: 40%;
 	display: flex;
     flex-direction: row;
     align-content: center;
@@ -42,6 +50,7 @@ body {
     list-style: none;
     padding: 0;
     margin: 1%;
+    transition: all 2s ease;
 }
 
 .navbar-item a {
@@ -49,9 +58,40 @@ body {
 	text-decoration: none;
 }
 
-/*.navbar-container:nth-last-child() .navbar-item a {
+.navbar-item-special a {
 	color: #1de9b6;
-}*/
+}
+
+@media (max-width: 767px) {
+	.navbar {
+		flex-direction: row;
+		flex-wrap: wrap;
+		height: 10%;
+	}
+
+	.navbar-header {
+		width: 50%;
+	}
+
+	.navbar-collapse {
+		display: block;
+		width: 20%;
+		height: 15%;
+		background-color: white;
+	}
+
+	.navbar-container {
+		flex-direction: column;
+		width: 100%;
+		height: 0;
+		overflow: hidden;
+	}
+
+	.navbar-item a {
+		display: block;
+		margin: 10px 0;
+	}
+}
 
 /***************************************  navbar end *****************************************************/
 
@@ -59,7 +99,7 @@ body {
 
 .intro {
 	width: 100vw;
-	height: 100vw;
+	height: 100vh;
 }
 
 .intro-content {
@@ -72,31 +112,792 @@ body {
 }
 
 .intro-content .header {
-	height: 16%;
+	height: 25%;
+	width: 60%;
 }
 
+.intro-content .paragraph {
+	width: 65%;
+}
+
+@media (max-width: 767px) {
+	.intro-content {
+		height: 75%;
+	}
+
+    .intro-content .header {
+    	width: 95%;
+    	height: 45%;
+    }
+
+    .intro-content .paragraph {
+    	width: 95%;
+    	height: 20%;
+    }
+}
 /***************************************** intro end*****************************************************/
 
+/*************************************** features start ************************************************/
+
+.features-header {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8%;
+
+}
+
+.features-header h2 {
+	width: 60%;
+}
+
+.features-header p {
+	width: 50%;
+}
+
+.features-cards {
+	width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
 
 
+.card {
+	width: 50%;
+	height: 50%;	
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 5%;
+}
+
+.green-icon-container {
+	margin-bottom: 15px;
+	padding: 25px;
+	background-color: #031813;
+	border-radius: 50%;
+}
+
+.red-icon-container {
+	margin-bottom: 15px;
+	padding: 25px;
+	background-color: #1a0207;
+	border-radius: 50%;
+}
+
+.blue-icon-container {
+	margin-bottom: 15px;
+	padding: 25px;
+	background-color: #00181a;
+	border-radius: 50%;
+}
+
+.green-icon {
+	color: #00e676;
+}
+
+.green-blue-icon {
+	color: #1de9b6;
+}
+
+.red-icon {
+	color: #ff1744;
+}
+
+.blue-icon {
+	color: #00e5ff;
+}
+
+.card h6 {
+	width: 100%;
+}
+
+.card .paragraph {
+	width: 60%;
+	line-height: 1.5rem;
+}
+
+@media (max-width: 767px) {
+	.features-header h2 {
+		width: 100%;
+	}
+
+	.features-header p {
+    	width: 100%;
+	}
+
+	.card {
+		width: 100%;
+	}
+
+	.card .paragraph {
+    	width: 95%;
+    	line-height: 1.5rem;
+	}
+}
+
+@media (min-width: 768px) and (max-width:  991px) {
+	.card h6 {
+    	width: 70%;
+	}
+
+	.card .paragraph {
+	    width: 60%;
+	}
+}
+/*************************************** features end ************************************************/
+
+/************************************** Slider container start ********************************************/
+
+.slider-container {
+	display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 2%;
+}
+
+.slider-header {
+	width: 60%;
+}
+
+.slider-header p {
+	margin: 4% 0px;
+    line-height: 1.6rem;
+
+}
+
+.slider-header button {
+	margin-top: 5%;
+	padding: 16px 17px;
+    font-size: 1rem;
+}
+
+.slider-body {
+	width: 34%;
+	overflow: hidden;
+}
+
+.slider-buttons {
+	text-align: center;
+}
+
+.slider-button {
+	background-color: #073a2d;
+	padding: 6px;
+    border: none;
+    border-radius: 50%;
+    margin: 1% 3%;
+    cursor: pointer;
+}
+
+.slider-button-active {
+	background-color: #15ae88;
+}
+
+.slider-items {
+	position: relative;
+	transform: translateX(100%);
+    transition: transform 2s cubic-bezier(0.64, -0.06, 0.7, 1.42);
+    margin: 4% 0;
+}
+
+.slider-item:nth-child(1) {
+	left: -100%;
+}
+
+.slider-item:nth-child(3) {
+	left: 100%;
+}
+
+.slider-item {
+	position: absolute;
+	max-width: 100%;
+    border-radius: 5px;
+}
+
+@media (max-width: 767px) {
+
+	.slider-container {
+		height: 100%;
+    	flex-direction: column;
+    	margin-left: 20px;
+	}
+
+	.slider-header {
+		height: 100%;
+    	width: 100%;
+	}
+
+	.slider-header p {
+		margin: 0;
+	}
+
+	.slider-body {
+    	width: 100%;
+    	height: 60%;
+    	margin-left: -10px;
+	}
+}
+
+@media (min-width: 768px) and (max-width:  991px) {
+	.slider-container {
+		height: 100%;
+    	flex-direction: column;
+    	margin-left: 20px;
+	}
+
+	.slider-header {
+		height: 60%;
+    	width: 100%;
+	}
+
+	.slider-header .header {
+		width: 100%;	
+		text-align: center;
+	}
+
+	.slider-header .paragraph {
+		width: 100%;	
+		text-align: center;
+		margin: 0;
+	}
+
+	.slider-header button {
+		position: relative;
+    	left: 50%;
+    	transform: translate(-50%, 0);
+	}
+
+	.slider-body {
+    	width: 70%;
+    	height: 100%;
+    	margin-left: 15%;
+	}
+
+	.pricing-cards {
+		flex-wrap: wrap;
+	}
+
+	.pricing .pricing-cards .card {
+    	width: 45%;
+	}
+}
+
+/*@media (max-width:  1200px) {
+	.slider-header {
+    	width: 55%;
+	}
+}*/
+
+/************************************** Slider container end **********************************************/
+
+/*************************************** pricing start *********************************************/
+
+.pricing {
+	background-color: #11171a;
+	padding-top: 10%;
+	padding-bottom: 5%;
+	clip-path: polygon(57% 2%, 100% 4%, 100% 97%, 0 100%, 0 100%, 0 34%, 0 0);
+}
+
+.pricing-header {
+	display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.pricing-cards {
+	display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 5%;
+}
+
+.pricing-cards .card {
+	width: 28%;
+	background-color: #263238;
+	padding: 7% 0;
+	border-radius: 5px;
+}
+
+.card-pricing {
+	color: #1de9b6;
+	font-size: 3rem;
+    margin: 25px 0;
+}
+
+.card-pricing-blue {
+	color: #00e5ff;
+}
+
+.per-x {
+	color: #78909C;
+}
+
+.card-features {
+	width: 100%;
+	list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 2% 0;
+}
+
+.card-features .card-feature .card-feature-paragraph {
+	width: 100%;
+    margin: 4% 0;
+}
+
+.pros {
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: row;
+}
+
+.pros-header-container {
+	width: 40%;
+}
+
+.pros .pros-header-container .pros-header-paragraph {
+	width: 32ch;
+	margin: 0;
+}
+
+.pricing-features {
+	width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    list-style: none;
+}
+
+.pricing-feature {
+	width: 50%;
+	margin: 2% 0;
+}
+
+.pricing-feature p {
+	display: inline;
+}
+
+.pricing-feature span {
+    font-size: 9px;
+    padding: 0 5px;
+    margin-right: 8px;
+	border: 2px #1de9b6 solid;
+	border-radius: 50%;
+}
+
+.create-account {
+	width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.create-account .header {
+	width: 75%;
+	border-top: #263238 2px solid;
+    padding-top: 2%;
+    text-align: center;
+}
+
+.create-account .paragraph {
+    width: 75ch;
+}
+
+@media (max-width: 767px) {
+
+	.pricing {
+		padding-top: 20%;
+		padding-bottom: 18%;
+	}
+
+	.pricing-cards {
+		flex-direction: column;
+	}
+
+	.pricing-cards .card {
+    	width: 95%;
+   		margin: 2% 2.5%;
+	}
+
+	.pros {
+		flex-direction: column;
+	}
+
+	.pros-header-container {
+    	width: 100%;
+    	margin-left: 20px;
+	}
+
+	.pros-header-container .header {
+		width: 20ch;
+	} 
+
+	.pros .pros-header-container .pros-header-paragraph {
+    	width: 95%;
+	}
+
+	.pricing-features {
+    	width: 100%;
+    	flex-direction: column;
+	}
+
+	.pricing-feature {
+		width: 90%;
+	}
+
+	.create-account {
+    	margin: 20px 0;
+    }
 
 
+	.create-account .header {
+    	width: 100%;
+    	padding-top: 10%;
+	}
 
+	.create-account .paragraph {
+    	width: 100%;
+	}
+}
 
-/******************************************* OOCSS *****************************************************/
+@media (min-width: 768px) and (max-width:  991px) {
+	.pros {
+	    flex-direction: column;
+    	align-items: center;
+	}
 
-.header {
-	width: 25ch;
-    color: white;
-    line-height: 5rem;
+	.pros-header-container {
+    	width: 100%;
+    	text-align: center;
+	}
+
+	.pros-header-container .header,
+	.pros .pros-header-container .pros-header-paragraph  {
+		width: 100%;
+	}
+
+	.pricing-features {
+	    width: 100%;
+    	flex-wrap: wrap;
+    	flex-direction: row;
+	}
+
+}
+
+/*************************************** pricing end **********************************************/
+
+/**************************************** faq start **********************************************/
+
+.faq {
+	padding-top: 5%;
+	padding-bottom: 5%;
+	clip-path: polygon(57% 2%, 100% 4%, 100% 39%, 100% 100%, 49% 100%, 0 100%, 0 86%, 0 34%, 0 0);
+}
+
+.faq-cards {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.faq-card {
+	width: 40%;
+    margin: 3% 0;
+}
+
+.faq-card .paragraph {
+	width: 90%;
+	margin: 0;
+}
+
+.faq-card .header {
+	width: 95%;
+}
+
+.contact-us {
+	width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-us .header {
+	margin: 3% 0;
+
+}
+
+@media (max-width: 767px) {
+	.faq-header .header {
+		width: 100%;
+		font-size: 3rem;
+    	line-height: 3rem;
+	}
+
+	.faq-header .paragraph {
+		width: 100%;
+	}
+
+	.faq-cards {
+    	display: flex;
+    	flex-direction: column;
+	}
+
+	.faq-card {
+   		width: 100%;
+    	margin: 5% 20px;
+	}
+
+	.contact-us {
+		padding: 10% 0 20% 0;
+	}
+}
+
+@media (min-width: 768px) and (max-width:  991px) {
+	.faq-card .paragraph {
+    	width: 29ch;
+    }
+}
+
+/**************************************** faq end ************************************************/
+
+/***************************************** blog start **********************************************/
+
+.blog {
+	background-color: #11171a;
+	padding-top: 8%;
+	clip-path: polygon(57% 2%, 100% 4%, 100% 97%, 0 100%, 0 100%, 0 34%, 0 0);
+}
+
+.blog-content {
+    display: flex;
+    justify-content: space-evenly;
+	margin: 5% 0;
+}
+
+.blog-card {
+	width: 28%;
+}
+
+.blog-card img {
+	max-width: 100%;
+	border-radius: 3px 3px 0 0;
+	transform: translate(0px, 15px);
+}
+
+.blog-card a {
+	text-decoration: none;
+}
+
+.blog-card-body {
+	background-color: #263238;
+    padding: 7%;
+    border-radius: 3px;
+}
+
+.blog-card-body .header {
+	width: 100%;
+	margin: 4% 0;
+}
+
+.blog-card-body .paragraph {
+	width: 34ch;
+	margin: 4% 0;
+}
+
+.blog-card-body .paragraph a {
+	color: #1de9b6;
+}
+
+.blog-card-body .paragraph a:hover:after {
+	width: 0;
+}
+
+.all-photos {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 7%;
+}
+
+@media (max-width: 767px) {
+
+	.blog {
+		padding-top: 18%;
+		padding-bottom: 10%;
+	}
+
+	.blog-content {
+		flex-direction: column;
+	}
+
+	.blog-card {
+    	width: 95%;
+    	margin-left: 2.5%;
+	}	
+}
+
+@media (min-width: 768px) and (max-width:  991px)  {
+	.blog-content {
+		flex-wrap: wrap;
+	}
+
+	.blog-card {
+    	width: 45%;
+	}
+}
+
+@media (max-width:  1200px) {
+	.blog-card-body .paragraph {
+    	width: 27ch;
+	}
+}
+
+/***************************************** blog end ***********************************************/
+
+/*************************************** footer start ******************************************/
+
+footer {
+	display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.about-us {
+	width: 31%;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-us .paragraph {
+	width: 95%;
+}
+
+.links {
+	width: 38%;
+	display: flex;
+	justify-content: space-around;
+	padding-top: 2%;
+}
+
+.links-container {
+	list-style: none;
+}
+
+.links-header {
+	display: block;
+	color: white;
+	font-size: 1.1rem;
     font-weight: bolder;
     margin: .5rem 0;
 }
 
+.link-item {
+	display: block;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+    margin: 15% 0;
+}
+
+.link-item a {
+	color: #cfd8dc;
+	text-decoration: none;
+}
+
+.accounts-container {
+	height: 1%;
+}
+
+small {
+	width: 50%;
+}
+
+@media (max-width: 767px) {
+	footer {
+    	flex-direction: column;
+	}
+
+	.about-us {
+    	width: 100%;
+    	flex-direction: column;
+    	margin-left: 20px;
+    	padding-top: 80px;
+	}
+
+	.links {
+    	width: 100%;
+    	flex-direction: column;
+	}
+
+	.links-container {
+    	list-style: none;
+    	padding: 0 25px;
+	}
+
+	.link-item {
+    	margin: 5% 0;
+	}
+
+	small {
+		width: 100% !important;
+	}
+}
+
+@media (min-width: 768px) and (max-width:  991px) {
+	.about-us {
+    	width: 45%;
+	}
+}
+
+/*************************************** footer end *******************************************/
+
+/******************************************* OOCSS *****************************************************/
+
+.header {
+	width: 65%;
+    color: white;
+    font-weight: 900;
+    margin: .5rem 0;
+}
+
 .paragraph {
-	width: 60ch;
-    line-height: 1.6rem;
-    margin: 2%;
+	width: 80%;
+    margin: 2% 0;
+}
+
+.btt {
+	position: absolute;
+	top: 94%;
+	left: 94%;
+	border-radius: 50%;
+	padding: 5px;
+	background-color: #15ae88;
+	border: none;
+	z-index: 9999;
+	transform: translateX(100px);
+	transition: 2s transform ease-in-out;
+	cursor: pointer;
+}
+
+.btt:hover {
+	background-color: #1de9b6;
+}
+
+.btt img {
+	max-width: 30px;
+	max-height: 30px;
 }
 
 .button {
@@ -108,30 +909,135 @@ body {
 	box-shadow: -1px 2px 13px 0px #1de9b6;
     padding: 12px 30px;
     cursor: pointer;
+    transition: color .3s ease;
+}
+
+.button-card-blue {
+	background-color: #00e5ff;
+}
+
+.button:hover {
+	color: white;
+	box-shadow: inset 0px 0px 20px 0px #0000007a;;
+}
+
+.link-item a::after, .navbar-item a::after {
+	content: "";
+	display: block;
+	width: 0;
+	height: 1px;
+	background-color: #f0f3f4;
+	transition: width 1s ease;
+}
+
+.link-item a:hover, .navbar-item a:hover {
+	color: #f0f3f4;
+}
+
+.navbar-item-special a:hover {
+	color: #13c89b;
+}
+
+.navbar-item-special a::after {
+	background-color: #13c89b;
+}
+
+.link-item a:hover::after, .navbar-item a:hover::after {
+	width: 100%;
 }
 
 .bold {
-	font-weight: normal;
 	color: #cfd8dc;
 }
 
 .light {
-	font-weight: normal;
 	color: #78909C;
+}
+
+.bg-white {
+	background-color: white;
+	box-shadow: -1px 2px 13px 0px white;
+}
+
+.bg-white:hover {
+	color: black;
+	box-shadow: inset 0px 0px 20px 0px #0000007a;;
 }
 
 .fs-h1 {
 	font-size: 3rem;
+	line-height: 5rem;
 }
 
 .fs-1_5 {
 	font-size: 1.3rem;
+	line-height: 1.6rem;
 }
 
 .fs-2 {
 	font-size: 2rem;
+	line-height: 2rem;
+}
+
+.fs-2_5 {
+	font-size: 2.6rem;
+	line-height: 3.5rem;
+}
+
+.fw-bold {
+	font-weight: bolder;
 }
 
 .align-center {
+	width: 100%;
 	text-align: center;
 }
+
+@media (max-width: 767px) {
+    .header {
+    	width: 100%;
+    	height: 40%;
+    }
+
+    .paragraph {
+    	width: 100%;
+    	height: 20%;
+    }
+}
+
+/***********************************************************************************************/
+
+@media (max-width: 400px) {
+	.header {
+    	width: 95%;
+    	height: 55%;
+	}
+
+	.intro-content .header {
+    	width: 95%;
+    	height: 70%;
+	}
+}
+
+@media (max-width: 991px) and (max-height:  500px) {
+	.intro-content .header {
+    	height: 55%;
+	}
+
+	.slider-container {
+    	height: 100%;
+    	flex-direction: row;
+	}
+
+	.slider-header {
+    	height: 100%;
+    	width: 100%;
+	}
+
+	.slider-body {
+    	width: 100%;
+    	height: 100%;
+	}
+}
+
+/*********************************************************************************************/
